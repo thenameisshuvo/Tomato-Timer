@@ -1,13 +1,91 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lobster&display=swap');
+
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0f0f0f;
+  background-image:
+    url('https://www.transparenttextures.com/patterns/stardust.png'), 
+    radial-gradient(ellipse at bottom, #0f0f0f 0%, #000000 100%);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Layout container */
+#TomatoTimer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* Typography styles */
+.red {
+  color: #CD1E25;
+  font-style: normal;
+  font-family: 'Lobster', cursive;
+}
+
+.darker-red {
+  color: #9d1419;
+  font-style: normal;
+  font-family: 'Lobster', cursive;
+}
+
+.green {
+  color: #5aac46;
+  font-style: normal;
+  font-family: 'Lobster', cursive;
+}
+
+/* Button styles */
+button, button:link, button:visited {
+  color: #fce8e8;
+  font-size: 8rem;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 1rem;
+  font-family: 'Lobster', cursive;
+}
+
+button:hover {
+  color: #CD1E25;
+  transition: color 300ms ease-in-out;
+  cursor: pointer;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
+
+/* Add some animation for stars twinkling */
+@keyframes twinkle {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+/* Make sure images, SVGs or decorative elements are responsive */
+img, svg {
+  max-width: 100%;
+  height: auto;
 }
