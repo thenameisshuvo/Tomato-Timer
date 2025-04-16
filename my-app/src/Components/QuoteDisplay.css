@@ -1,0 +1,54 @@
+.quote-display-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000; /* Make sure it's on top of other content */
+
+    padding: 20px;
+    width: 300px;
+    background-color: transparent;
+    border-left: 6px solid red;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-display-container:hover {
+    background-color: #e9ecef;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.quote-text {
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #343a40;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Hide the button by default */
+.quote-display-container button {
+    display: none;
+    margin-top: 12px;
+    padding: 12px 18px; /* Increased button size */
+    font-size: 1em; /* Increased font size */
+    font-weight: 500;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Show the button when hovering over the container */
+.quote-display-container:hover button {
+    display: inline-block;
+}
+
+.quote-display-container button:hover {
+    background-color: green;
+    transform: scale(1.03);
+    color: white;
+}

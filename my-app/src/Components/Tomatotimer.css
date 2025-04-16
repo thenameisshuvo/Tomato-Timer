@@ -1,0 +1,36 @@
+.contents-box-flex {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 300ms ease-in-out;
+  }
+  
+  .showMenu {
+    transform: translateX(-100%);
+    transition: transform 300ms ease-in-out;
+  }
+  
+  #menu-btn {
+    color: #fce8e8;
+    font-size: 3rem;
+    background: transparent;
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 100;
+    border: none; /* Added for consistency */
+    outline: none; /* Added for accessibility */
+  }
+  
+  #menu-btn:hover {
+    color: #fce8e8;
+    background: #a3161b;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+  }
