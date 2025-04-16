@@ -17,37 +17,46 @@ const Settings = (props) => {
       <section id="Customize">
         <div className="settings-content">
           <h1>
-            Customize your <strong className="red">Tomatos</strong>!
+            Personalize your <strong className="red">Pomodoro Experience</strong>!
           </h1>
           <Option id="session" {...props}>
-            <span>Set up your <em className="red">Tomatos</em>!</span>
+            <span>Set your <em className="red">Focus Session</em> duration</span>
             <p>
-              Set up your Tomatos (AKA <em>Pomodoro Sessions</em>). You can choose any number of
-              minutes <strong className="red">up to 60</strong>. One hour without a break is not a
-              good idea anyways.
+              Define how long each <em>Pomodoro Session</em> should last. You can choose any duration
+              <strong className="red"> up to 60 minutes</strong>. Remember, staying focused for too long without breaks can reduce productivity.
             </p>
           </Option>
           <Option id="break" {...props}>
-            <span>Is 5 minutes OK for a <strong className="red">short break</strong>?</span>
+            <span>Customize your <strong className="red">Short Break</strong> time</span>
             <p>
-              Right after the <em>Pomodoro Session</em> is finished, you will have X minutes for a{' '}
-              <strong className="red">short break</strong>, being X the number set here.
+              After each <em>Pomodoro Session</em>, take a short break to recharge. Set the duration
+              of your <strong className="red">short break</strong> here. A quick pause can work wonders for your focus!
             </p>
-            <p>If 5 minutes is not enough, you know what to do :D</p>
+            <p>Need more than 5 minutes? Adjust it to suit your needs!</p>
           </Option>
           <Option id="long-break" {...props}>
-            <span>Now it's time for a <strong className="red">long break</strong>.</span>
+            <span>Plan your <strong className="red">Long Break</strong> intervals</span>
             <p>
-              A <strong className="red">long break</strong> comes after a number of{' '}
-              <em>Pomodoro Sessions</em> are completed. Just like the previous option, you can
-              customize this here.
+              A <strong className="red">long break</strong> helps you unwind after completing several
+              <em>Pomodoro Sessions</em>. Set the duration of your long break here to ensure you’re fully recharged.
             </p>
           </Option>
           <Option id="total-sessions" {...props}>
-            <span>How many <strong className="red">Tomatos</strong> before the <em>long break</em>.</span>
+            <span>Decide how many <strong className="red">Sessions</strong> before a <em>Long Break</em></span>
             <p>
-              After a certain number of <em>Pomodoro Sessions</em>, you take a long break. Here you
-              specify that number.
+              Specify how many <em>Pomodoro Sessions</em> you want to complete before taking a long break. This helps you stay consistent and productive.
+            </p>
+          </Option>
+          <Option id="notifications" {...props}>
+            <span>Enable <strong className="red">Notifications</strong> for better tracking</span>
+            <p>
+              Stay on top of your schedule by enabling notifications. Get alerts when a session ends or a break begins.
+            </p>
+          </Option>
+          <Option id="breakTips" {...props}>
+            <span>Enable <strong className="red">Break Activity Suggestions</strong></span>
+            <p>
+              Get small, helpful suggestions during breaks—like stretching, walking, or drinking water—to make your break time more refreshing and intentional.
             </p>
           </Option>
           <button id="save-settings" onClick={() => props.toggleMenu()}>
